@@ -10,11 +10,11 @@ jobs:
     name: Aliyun Signin
     runs-on: ubuntu-latest
     steps:
-      - uses: ImYrS/aliyun-auto-signin@main
+      - uses: Yumu152068/aliyun-auto-signin@main
         with:
           REFRESH_TOKENS: ${{ secrets.REFRESH_TOKENS }}
           GP_TOKEN: ${{ secrets.GP_TOKEN}}
-          PUSH_TYPES: 'telegram'
+          PUSH_TYPES: ''
           DO_NOT_REWARD: 'false'
           SERVERCHAN_SEND_KEY: ${{ secrets.SERVERCHAN_SEND_KEY }}
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
@@ -33,8 +33,3 @@ jobs:
           CQHTTP_ENDPOINT: ${{ secrets.CQHTTP_ENDPOINT }}
           CQHTTP_USER_ID: ${{ secrets.CQHTTP_USER_ID }}
           CQHTTP_ACCESS_TOKEN: ${{ secrets.CQHTTP_ACCESS_TOKEN }}
-          WECHAT_CORPID: ${{ inputs.WECHAT_CORPID }}
-          WECHAT_CORPSECRET: ${{ inputs.WECHAT_CORPSECRET }}
-          WECHAT_AGENTID: ${{ inputs.WECHAT_AGENTID }}
-          WECHAT_TOUSER: ${{ inputs.WECHAT_TOUSER }}
-          WECHAT_PROXYURL: ${{ inputs.WECHAT_PROXYURL }}
